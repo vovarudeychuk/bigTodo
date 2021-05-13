@@ -31,7 +31,6 @@ import {
   notify,
 } from '../templates/util.template'
 
-
 // Click Events
 $(document).on('click', (event) => {
   if (shudAddBoard(event)) {
@@ -146,9 +145,10 @@ $(document).on('keydown', function (event) {
       keyCodeTwo: 39,
       callback: activeBoardListDispach,
     }
-    arrowNavigations(event, cardsOptions)
+    let arrId = arrowNavigations(event, cardsOptions)
 
-    let listId = document.querySelector(`.${cardsOptions.activeSelector}`).id
+    let listId = document.querySelector(`.${cardsOptions.activeSelector}`).dataset.id
+
     let listOpt = {
       allSelector: `[data-card-id="${listId}"]  .todo-list`,
       activeSelector: 'todo-active',      
@@ -189,7 +189,9 @@ $(document).on('keydown', function (event) {
       keyCodeTwo: 39,
       callback: activeBoardListDispach
     }
-    let listId = arrowNavigations(event, minimizeOpt)
+    arrowNavigations(event, minimizeOpt)
+    let listId = document.querySelector(`.${minimizeOpt.activeSelector}`).dataset.id
+
     let activeList = document.querySelector(`[data-id="${listId}"]`)
     if(event.keyCode === 77) { // minimize list
       event.preventDefault() 

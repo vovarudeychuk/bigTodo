@@ -36,6 +36,7 @@ bower_components
 .c9/
 *.launch
 .settings/
+.cache
 *.sublime-workspace
 
 # IDE - VSCode
