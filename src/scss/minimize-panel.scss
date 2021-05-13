@@ -1,0 +1,44 @@
+.minimize-panel {
+  // position: fixed;
+  box-shadow: none;
+  z-index: 10001;
+  margin-bottom: 0.2rem;
+  min-height: 38.59px;
+  // top: 0;
+  bottom: 0rem;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: white;
+  // padding: .3rem .4rem .3rem .3rem; 
+
+  .card-active {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important; 
+  }
+  
+  span {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    
+    // justify-content: space-between;
+
+    i {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-color: #4a4a4a;
+      color: white;
+    }
+  }
+}
+
+.color-dark {
+  background-color: #4a4a4a; 
+  color: white;
+}
+
+
+

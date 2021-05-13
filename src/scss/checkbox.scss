@@ -1,0 +1,71 @@
+$duration: 0.8s;
+
+.todo-active {
+  background-color: rgb(235, 235, 235);
+    .item_menu {
+      display: block !important;
+    }
+}
+
+
+.todo-list {
+ 
+  // padding: 0 .2em 0 .1em;
+  justify-content: space-between;
+  display: flex;
+  border-bottom: solid 1px #ddd;
+
+  &:hover {
+    background-color: rgb(235, 235, 235);
+    .item_menu {
+      display: block;
+    }
+  }
+
+
+
+  .item_menu {
+    margin: auto 0;
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+      font-size: 17px;
+      color: rgb(92, 92, 92);
+    }
+  }
+
+}
+
+.todo {
+  position: relative;
+  padding: .2em .1em .2em .2em;
+  // margin: 0 auto;
+  display: flexbox;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  input[type=checkbox] {
+    margin: 10px;
+    background-color: red;
+  }  
+}
+
+.todo__state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.todo__text {
+  text-decoration: line-through;
+  
+}

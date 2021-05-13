@@ -1,0 +1,184 @@
+@import './spinner.scss';
+@import './checkbox.scss';
+@import './fixed-button.scss';
+@import './minimize-panel.scss';
+@import './helper-front.scss';
+@import './menu.scss';
+@import './notifications.scss';
+
+body {
+  // font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.minimize-card-active { 
+  -webkit-box-shadow: 0px 20px 30px -10px rgb(38, 57, 77);
+  -moz-box-shadow: 0px 20px 30px -10px  rgb(38, 57, 77);
+  
+}
+
+.card-active {
+  -webkit-box-shadow: 0px 20px 30px -10px rgb(38, 57, 77);
+  -moz-box-shadow: 0px 20px 30px -10px  rgb(38, 57, 77);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+  .message-header {
+    .card-icon {
+      display: block;
+      -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+      transition: width 2s, height 2s, background-color 2s, transform 2s;
+    }
+  }
+  // border: 1px dashed red;  
+ 
+}
+
+.card {
+  &:hover {
+    box-shadow: rgb(197, 197, 197) 0px 20px 30px -10px !important;
+    &.card-active {
+      box-shadow:  rgb(38, 57, 77) 0px 20px 30px -10px !important;
+    }
+
+    .card-icon {
+      display: block;
+      -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+      transition: width 2s, height 2s, background-color 2s, transform 2s;
+    }
+  }
+
+  .card-icon {
+    display: none;
+    position: absolute;
+    right: 1rem;
+  }
+
+
+  p.message-header {
+    justify-content: unset;
+
+    span.list-icon {
+      margin-right: 10px;
+    }
+  }
+
+  .add-list-task {
+    margin: 10px;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    margin: 0.3rem;
+    color: rgb(187, 187, 187);
+
+    &:hover {
+      color: #4a4a4a;
+      transition-duration: inherit;
+    }
+  }
+
+  .message-header {
+    height: 40px;
+  }
+
+  .progress {
+    height: 0.3rem;
+  }
+}
+
+.progress {
+  border-radius: 0;
+}
+
+.list {
+  display: flex !important;
+  justify-content: space-between;
+  display: list-item;
+}
+
+.menu-list a.is-active {
+  background-color: #4a4a4a;
+  font-size: bold;
+  color: #fff;
+  // font-weight: 700;
+  line-height: 1.25;
+}
+
+.menu-list-li {
+  a.list {
+    display: flex;
+    min-height: 40px;
+    justify-content: space-between;
+  }
+
+  &:hover {
+    a {
+      span {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    span {
+      display: none;
+    }
+  }
+}
+
+.add-board-btn {
+  margin: 0.5rem;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  color: rgb(168, 168, 168);
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(92, 92, 92);
+  }
+}
+
+.list-icon {
+  font-size: 1.1rem;
+  will-change: transform;
+}
+
+.icon-minimize {
+  color:rgb(143, 143, 143);  
+  cursor: pointer;
+  &:hover {
+    color: rgb(184, 184, 184);
+  }
+}
+
+.panel-shadow {
+  -webkit-box-shadow: 7px 7px 20px 2px rgba(193, 193, 193, 0.44);
+  -moz-box-shadow: 7px 7px 20px 2px rgba(193, 193, 193, 0.44);
+  box-shadow: 7px 7px 20px 2px rgba(193, 193, 193, 0.44);
+
+  &:hover {
+    -webkit-box-shadow: 7px 7px 20px 4px rgba(193, 193, 193, 0.71);
+    -moz-box-shadow: 7px 7px 20px 4px rgba(193, 193, 193, 0.71);
+    box-shadow: 7px 7px 20px 4px rgba(193, 193, 193, 0.71);
+  }
+}
+
+.control-input {
+  max-width: 300px;
+  margin: 0 auto;
+  button {
+    margin-top: 1rem;
+  }
+
+  i {
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    color: #3e8ed0;
+    padding-bottom: 1rem;
+
+  }
+}
+
+
